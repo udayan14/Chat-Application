@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hedwig</title> <script src="js/chat.js" charset="utf-8"></script>
+    <script src="js/client.js" charset="utf-8"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> -->
+ <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="css/photon.css">
+    
+        <!-- <link rel="stylesheet" href="css/photon.min.css"> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/chat.css">
+   <link rel="stylesheet" href="css/bootstrap.css">
+
+  </head>
+
+<body>
+    <div class="window">
+        <div class="window-content">
+            <div class="pane-group">
+                <div class="pane-sm sidebar">
+                    <hr><ol class="list-group" id="home"></ol> <hr>
+                    <ol class="list-group" id="users"><li class="list-group-header" align="center">
+                            <I>Users</I>
+                        </li></ol>
+                </div>
+
+                <div class="pane">
+
+                  <div class="mainDiv" id="chat_window" style="width: 90%;margin:0 auto; height: 90%">
+                    <div style="overflow-y:auto;" class="innerDiv" id="innerDiv">
+                      <div id="last_seen"></div>
+                      <ol class="chat " id="chat_items">
+                      </ol>
+                      <input class="inp" name="usermsg" type="text" id="inputMessage" style="width:75%;height:40px" onkeydown = "if (event.keyCode == 13)
+                        document.getElementById('send').click()">
+                      <button class="btn btn-info btn-lg" id="send" onclick="sendPressed()" style="width:25%;float:right;height:40px">  <span class="glyphicon glyphicon-send"></span> Send  </button>
+                    </div>
+                  </div>
+
+                  <div id="file-div">
+                    <input type="file" id="files" name="files[]"  multiple />
+                    <output id="list"></output>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+        </div>
+   
+</body>
+<script type="text/javascript">
+document.getElementById('files').addEventListener('change', File_Selector, false);
+
+</script>
+</html>
+
