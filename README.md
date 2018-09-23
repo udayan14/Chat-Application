@@ -46,4 +46,4 @@ A new client window will open. For opening another client npm install in not req
 
 2. Give the appropriate host for sockets in server.py(line 11) and client.js(line 6)
 
-Note:- Use a newer version of electron. The version in the source has known security vulnerability.
+Note:- Use a newer version of electron. The version in the source has a known security vulnerability.
